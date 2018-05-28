@@ -49,11 +49,9 @@ function deleteGrid() {
 // Clear the grid
 function clearGrid() {
   const allCells = document.querySelectorAll('td');
-  allCells.forEach(
-    function(currentValue, currentIndex, listObj) {
-      currentValue.setAttribute('style', 'background-color: white;');
-    }
-  );
+  for (let currentCell of allCells) {
+    currentCell.setAttribute('style', 'background-color: white;');
+  }
 }
 
 // hook clear button to clearGrid function
